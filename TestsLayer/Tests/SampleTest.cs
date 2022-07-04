@@ -20,15 +20,15 @@ namespace SeleniumBasicFramework.Tests
             const string ExpectedProductName = "Grandmas Boysenberry Spread";
             const string SqlSiteUrl = "https://www.tutorialrepublic.com/codelab.php?topic=sql&file=select-all";
 
-            //var Api_dev_key = "yhIfRatXXrq1LACyqOvuCjxR3nE1hV6G";
-            //var Api_user_key = "";
-            //var Api_results_limit = "100";
-            //var url = "https://pastebin.com/api/api_post.php";
-            //string content = "api_dev_key=yhIfRatXXrq1LACyqOvuCjxR3nE1hV6G&api_user_name=Aditya_Jain&api_user_password=Aditya@05101992";
-            //HttpClientHandler handler = new HttpClientHandler();
-            //HttpClient httpClient = new HttpClient(handler);
-            //var request = new HttpRequestMessage(HttpMethod.Post, url);
-            //var response = await httpClient.SendAsync(request);
+            var Api_dev_key = "yhIfRatXXrq1LACyqOvuCjxR3nE1hV6G";
+            var Api_user_key = "";
+            var Api_results_limit = "100";
+            var url = "https://pastebin.com/api/api_post.php";
+            string content = "api_dev_key=yhIfRatXXrq1LACyqOvuCjxR3nE1hV6G&api_user_name=Aditya_Jain&api_user_password=Aditya@05101992";
+            HttpClientHandler handler = new HttpClientHandler();
+            HttpClient httpClient = new HttpClient(handler);
+            var request = new HttpRequestMessage(HttpMethod.Post, url);
+            var response = await httpClient.SendAsync(request);
 
             IWebDriver Driver = SingletonBrowserClass.GetInstanceOfSingletonBrowserClass().GetDriver();
             Driver.Url = SqlSiteUrl;
